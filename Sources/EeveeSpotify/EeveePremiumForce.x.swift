@@ -41,7 +41,7 @@ private func forcedPremiumString(forKey key: String) -> String? {
     case "previous-streaming-rules":               return ""
     case "high-bitrate":                           return "1"
     case "very-high-bitrate":                      return "1"
-    case "audio-quality":                          return "very_high"
+    case "audio-quality":                          return "lossless"
     case "shuffle":                                return "0"
     case "shuffle-mode":                           return "0"
     case "pick-and-shuffle":                       return "0"
@@ -58,6 +58,7 @@ private func forcedPremiumString(forKey key: String) -> String? {
     case "current-period-end":                     return "9999999999"
     case "premium-promotion-eligible":             return "0"
     case "payments-initial-campaign":              return "default"
+    case "incognito-mode-timeout":                 return "99999999999999999"
 
     // Server pushes these to trigger ForcedLogoutDaemon / AccessTokenRevokerDaemon.
     case "forced_logout":                          return ""
