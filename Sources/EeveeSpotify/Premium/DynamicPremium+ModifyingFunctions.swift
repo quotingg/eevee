@@ -486,7 +486,7 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     }
 
     attributes["audio-quality"] = AccountAttribute.with {
-        $0.numberValue = 5
+        $0.stringValue = "5"
     }
     
     attributes["loudness-levels"] = AccountAttribute.with {
@@ -527,7 +527,7 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     }
 
     attributes["incognito_mode_timeout"] = AccountAttribute.with {
-        $0.numberValue = 99999999999999999
+        $0.stringValue = "99999999999999999"
     }
 
     attributes.removeValue(forKey: "payment-state")
