@@ -18,6 +18,7 @@ private func forcedPremiumString(forKey key: String) -> String? {
     case "financial-product":                      return "pr:premium,tc:0"
 
     case "ads":                                    return "0"
+    case "ad-session-persistence"                  return "0"
     case "ab-ad-player-targeting":                 return "0"
     case "allow-advertising-id-transmission":      return "0"
     case "restrict-advertising-id-transmission":   return "1"
@@ -41,7 +42,7 @@ private func forcedPremiumString(forKey key: String) -> String? {
     case "previous-streaming-rules":               return ""
     case "high-bitrate":                           return "1"
     case "very-high-bitrate":                      return "1"
-    case "audio-quality":                          return "lossless"
+    case "audio-quality":                          return "5"
     case "shuffle":                                return "0"
     case "shuffle-mode":                           return "0"
     case "pick-and-shuffle":                       return "0"
@@ -118,7 +119,7 @@ private func rewritePremiumDict(_ dict: NSDictionary) -> NSDictionary {
 
 private let premiumWatchKeys: [String] = [
     "type", "catalogue", "product", "name",
-    "ads", "audio-ad-frequency", "video-ad-frequency",
+    "ads", "ad-session-persistence", "audio-ad-frequency", "video-ad-frequency",
     "on-demand", "unrestricted", "shuffle-eligible",
     "player-license", "player-license-v2",
     "subscription-enddate", "product-expiry",
