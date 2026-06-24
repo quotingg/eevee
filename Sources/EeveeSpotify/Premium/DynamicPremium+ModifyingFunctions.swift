@@ -375,6 +375,10 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     attributes["ads"] = AccountAttribute.with {
         $0.boolValue = false
     }
+
+    attributes["ad-session-persistence"] = AccountAttribute.with {
+        $0.boolValue = false
+    }
     
     attributes["ab-ad-player-targeting"] = AccountAttribute.with {
         $0.stringValue = "0"
@@ -473,13 +477,16 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     }
 
     // Premium-vs-free product-state deltas. boolValue serializes as "0"/"1".
+    attributes["very-high-bitrate"] = AccountAttribute.with {
+        $0.boolValue = true
+    }
+    
     attributes["high-bitrate"] = AccountAttribute.with {
         $0.boolValue = true
     }
 
-    // audio-quality left unforced: Very High fails to stream on a free entitlement.
     attributes["audio-quality"] = AccountAttribute.with {
-        $0.stringValue = "lossless"
+        $0.numberValue = 5
     }
     
     attributes["loudness-levels"] = AccountAttribute.with {
@@ -517,6 +524,10 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
 
     attributes["mobile"] = AccountAttribute.with {
         $0.boolValue = true
+    }
+
+    attributes["incognito_mode_timeout"] = AccountAttribute.with {
+        $0.numberValue = 99999999999999999
     }
 
     attributes.removeValue(forKey: "payment-state")
