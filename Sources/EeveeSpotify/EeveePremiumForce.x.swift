@@ -126,7 +126,7 @@ private let premiumWatchKeys: [String] = [
     "forced_logout", "forced_logout_abroad_since", "force_logout",
     "logout_required", "session_invalidated",
     "payment-state", "last-premium-activation-date",
-    "country", "financial-product",
+    "country", "financial-product", "incognito_mode_timeout",
 ]
 
 private func passiveLogProductState(_ tag: String, _ dict: NSDictionary) {
