@@ -478,7 +478,10 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     }
 
     // audio-quality left unforced: Very High fails to stream on a free entitlement.
-
+    attributes["audio-quality"] = AccountAttribute.with {
+        $0.stringValue = "lossless"
+    }
+    
     attributes["loudness-levels"] = AccountAttribute.with {
         $0.stringValue = "1:-5.0,0.0,3.0:-2.0"
     }
