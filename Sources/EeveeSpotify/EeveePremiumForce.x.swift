@@ -18,7 +18,7 @@ private func forcedPremiumString(forKey key: String) -> String? {
     case "financial-product":                      return "pr:premium,tc:0"
 
     case "ads":                                    return "0"
-    case "ad-session-persistence"                  return "0"
+    case "ad-session-persistence":                 return "0"
     case "ab-ad-player-targeting":                 return "0"
     case "allow-advertising-id-transmission":      return "0"
     case "restrict-advertising-id-transmission":   return "1"
