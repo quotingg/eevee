@@ -65,9 +65,7 @@ private func forcedPremiumString(forKey key: String) -> String? {
     case "payments-initial-campaign":              return "default"
     
     case "incognito_mode_timeout":                 return "9999999999"
-    case "private-session-remaining":              return "999999999"
-
-    case "is-pigeon":                              return "1"
+    case "private-session-remaining":              return "9999999998"
 
     // Server pushes these to trigger ForcedLogoutDaemon / AccessTokenRevokerDaemon.
     case "forced_logout":                          return ""
