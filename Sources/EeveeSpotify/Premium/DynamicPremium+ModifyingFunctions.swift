@@ -531,11 +531,11 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     }
 
     attributes["incognito_mode_timeout"] = AccountAttribute.with {
-        $0.stringValue = "99999999999999999"
+        $0.stringValue = "9999999999"
     }
 
     attributes["private-session-remaining"] = AccountAttribute.with {
-        $0.stringValue = "99999999999999999"
+        $0.stringValue = "999999999"
     }
 
     attributes.removeValue(forKey: "payment-state")
