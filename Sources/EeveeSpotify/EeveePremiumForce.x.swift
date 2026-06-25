@@ -68,7 +68,7 @@ private func forcedPremiumString(forKey key: String) -> String? {
     // private-session-remaining has to be 1 less than the default incognito_mode_timeout
     // however this also enables automatic private session enabling doing this
     case "incognito_mode_timeout":                 return "9999999999"
-    case "private-session-remaining":              return "21599"
+    case "private-session-remaining":              return "9999999998"
 
     // Server pushes these to trigger ForcedLogoutDaemon / AccessTokenRevokerDaemon.
     case "forced_logout":                          return ""
