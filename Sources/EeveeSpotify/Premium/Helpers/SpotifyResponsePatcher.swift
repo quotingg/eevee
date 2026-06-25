@@ -125,10 +125,6 @@ enum SpotifyResponsePatcher {
         if url.isPremiumBadge {
             return PatchResult(data: try getPremiumPlanBadge(), tag: .planBadge)
         }
-        if url.isLibraryImport {
-            var ok = #"{"eligible":true}"#.data(using: .utf8)!
-            return PatchResult(data: ok, tag: .libimport)
-        }
         if url.isBootstrap {
             var msg = try BootstrapMessage(serializedBytes: buffer)
             UserDefaults.hasPatchedBootstrap = true
