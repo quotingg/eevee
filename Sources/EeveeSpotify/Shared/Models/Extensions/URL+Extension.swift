@@ -8,6 +8,10 @@ extension URL {
     var isPlanOverview: Bool {
         self.path.contains("GetPlanOverview")
     }
+
+    var isLibraryImport: Bool {
+        self.path.contains("library-import/v1/eligible")
+    }
     
     var isShuffle: Bool {
         self.path.contains("shuffle")
