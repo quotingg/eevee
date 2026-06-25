@@ -110,7 +110,7 @@ private func rewritePremiumDict(_ dict: NSDictionary) -> NSDictionary {
     let seedAlways = [
         "type", "catalogue", "product",
         "ads", "on-demand", "unrestricted", "shuffle-eligible",
-        "player-license", "player-license-v2",
+        "player-license", "player-license-v2", "streaming-only-premium"
     ]
     for k in seedAlways {
         if mutable[k] == nil, let v = forcedPremiumString(forKey: k) {
