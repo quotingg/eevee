@@ -424,8 +424,12 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
         $0.stringValue = "1"
     }
 
+    attributes["streaming-only-premium"] = AccountAttribute.with {
+        $0.stringValue = "1"
+    }
+
     attributes["offline"] = AccountAttribute.with {
-        $0.boolValue = true // allow downloading
+        $0.boolValue = false // allow downloading
     }
 
     attributes["on-demand"] = AccountAttribute.with {
