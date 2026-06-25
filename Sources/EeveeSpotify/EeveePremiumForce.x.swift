@@ -51,7 +51,7 @@ private func forcedPremiumString(forKey key: String) -> String? {
     case "shuffle-mode":                           return "0"
     case "pick-and-shuffle":                       return "0"
 
-    case "offline":                                return "0"
+    case "offline":                                return "1"
     case "can-use-offline":                        return "1"
     case "has-offline-state":                      return "0"
     case "max-offline-downloads-per-device":       return "10000"
@@ -66,8 +66,6 @@ private func forcedPremiumString(forKey key: String) -> String? {
     
     case "incognito_mode_timeout":                 return "99999999999999999"
     case "private-session-remaining":              return "99999999999999999"
-
-    case "remote-control":                         return "1"
 
     // Server pushes these to trigger ForcedLogoutDaemon / AccessTokenRevokerDaemon.
     case "forced_logout":                          return ""
@@ -110,7 +108,7 @@ private func rewritePremiumDict(_ dict: NSDictionary) -> NSDictionary {
     let seedAlways = [
         "type", "catalogue", "product",
         "ads", "on-demand", "unrestricted", "shuffle-eligible",
-        "player-license", "player-license-v2", "streaming-only-premium"
+        "player-license", "player-license-v2"
     ]
     for k in seedAlways {
         if mutable[k] == nil, let v = forcedPremiumString(forKey: k) {
@@ -134,7 +132,7 @@ private let premiumWatchKeys: [String] = [
     "forced_logout", "forced_logout_abroad_since", "force_logout",
     "logout_required", "session_invalidated",
     "payment-state", "last-premium-activation-date",
-    "country", "financial-product", "incognito_mode_timeout",
+    "country", "financial-product"
 ]
 
 private func passiveLogProductState(_ tag: String, _ dict: NSDictionary) {
