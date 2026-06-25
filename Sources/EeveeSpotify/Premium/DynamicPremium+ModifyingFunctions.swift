@@ -529,13 +529,14 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     attributes["mobile"] = AccountAttribute.with {
         $0.boolValue = true
     }
-
+    
     attributes["incognito_mode_timeout"] = AccountAttribute.with {
         $0.stringValue = "9999999999"
     }
 
+    // For some reason, this has to be 1 less than incognito_mode_timeout
     attributes["private-session-remaining"] = AccountAttribute.with {
-        $0.stringValue = "999999999"
+        $0.stringValue = "9999999998"
     }
 
     attributes["is-pigeon"] = AccountAttribute.with {
