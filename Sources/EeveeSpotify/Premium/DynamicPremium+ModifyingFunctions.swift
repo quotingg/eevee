@@ -425,7 +425,7 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     }
 
     attributes["streaming-only-premium"] = AccountAttribute.with {
-        $0.boolValue = "1"
+        $0.stringValue = "1"
     }
 
     attributes["offline"] = AccountAttribute.with {
@@ -536,6 +536,10 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
 
     attributes["private-session-remaining"] = AccountAttribute.with {
         $0.stringValue = "999999999"
+    }
+
+    attributes["is-pigeon"] = AccountAttribute.with {
+        $0.boolValue = true
     }
 
     attributes.removeValue(forKey: "payment-state")
