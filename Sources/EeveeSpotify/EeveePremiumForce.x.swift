@@ -110,7 +110,7 @@ private func rewritePremiumDict(_ dict: NSDictionary) -> NSDictionary {
     let seedAlways = [
         "type", "catalogue", "product",
         "ads", "on-demand", "unrestricted", "shuffle-eligible",
-        "player-license", "player-license-v2"
+        "player-license", "player-license-v2", ""
     ]
     for k in seedAlways {
         if mutable[k] == nil, let v = forcedPremiumString(forKey: k) {
@@ -134,7 +134,7 @@ private let premiumWatchKeys: [String] = [
     "forced_logout", "forced_logout_abroad_since", "force_logout",
     "logout_required", "session_invalidated",
     "payment-state", "last-premium-activation-date",
-    "country", "financial-product"
+    "country", "financial-product", "has-audiobooks-subscription"
 ]
 
 private func passiveLogProductState(_ tag: String, _ dict: NSDictionary) {
