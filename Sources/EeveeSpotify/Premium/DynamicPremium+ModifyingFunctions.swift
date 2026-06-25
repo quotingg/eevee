@@ -541,7 +541,7 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     // For some reason, this has to be 1 less than default incognito_mode_timeout (21600 so 21599)
     // Have this value different so it can be switched to be permanent rather than that 21599 limit
     attributes["private-session-remaining"] = AccountAttribute.with {
-        $0.stringValue = "9999999999"
+        $0.stringValue = "21599"
     }
 
     attributes.removeValue(forKey: "payment-state")
