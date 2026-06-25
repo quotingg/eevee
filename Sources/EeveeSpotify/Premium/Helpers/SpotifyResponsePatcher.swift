@@ -87,6 +87,7 @@ enum SpotifyResponsePatcher {
             // actual logout codepath.
             return #"{"status":"OK"}"#.data(using: .utf8)!
         }
+        
         if url.path.contains("pses/screenconfig") {
             return #"{}"#.data(using: .utf8)!
         }
@@ -104,6 +105,7 @@ enum SpotifyResponsePatcher {
         case planOverview = "PlanOverview"
         case dacEmpty    = "dac"
         case casitaStrip = "casitaStrip"
+        case libimport   = "library-import"
     }
 
     struct PatchResult {
@@ -122,6 +124,10 @@ enum SpotifyResponsePatcher {
         }
         if url.isPremiumBadge {
             return PatchResult(data: try getPremiumPlanBadge(), tag: .planBadge)
+        }
+        if url.isLibraryImport {
+            var ok = #"{"eligible":true}"#.data(using: .utf8)!
+            return PatchResult(data: ok, tag: .libimport)
         }
         if url.isBootstrap {
             var msg = try BootstrapMessage(serializedBytes: buffer)
