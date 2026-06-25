@@ -17,6 +17,10 @@ private func forcedPremiumString(forKey key: String) -> String? {
     case "player-license-v2":                      return "premium"
     case "financial-product":                      return "pr:premium,tc:0"
 
+    //spotify src | capabilites: {canDownload: dn("1" === e.offline, "1" === e["streaming-only-premium"])}
+    //spotify lets you download stuff if you also have streaming-only-premium enabled
+    case "streaming-only-premium":                 return "1"
+
     case "ads":                                    return "0"
     case "ad-session-persistence":                 return "0"
     case "ab-ad-player-targeting":                 return "0"
@@ -47,9 +51,9 @@ private func forcedPremiumString(forKey key: String) -> String? {
     case "shuffle-mode":                           return "0"
     case "pick-and-shuffle":                       return "0"
 
-    case "offline":                                return "1"
+    case "offline":                                return "0"
     case "can-use-offline":                        return "1"
-    case "has-offline-state":                      return "1"
+    case "has-offline-state":                      return "0"
     case "max-offline-downloads-per-device":       return "10000"
     case "max-offline-tracks":                     return "10000"
 
@@ -120,7 +124,7 @@ private func rewritePremiumDict(_ dict: NSDictionary) -> NSDictionary {
 private let premiumWatchKeys: [String] = [
     "type", "catalogue", "product", "name",
     "ads", "ad-session-persistence", "audio-ad-frequency", "video-ad-frequency",
-    "on-demand", "unrestricted", "shuffle-eligible",
+    "on-demand", "streaming-only-premium", "unrestricted", "shuffle-eligible",
     "player-license", "player-license-v2",
     "subscription-enddate", "product-expiry",
     "forced_logout", "forced_logout_abroad_since", "force_logout",
