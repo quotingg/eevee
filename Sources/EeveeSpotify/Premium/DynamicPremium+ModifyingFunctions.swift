@@ -429,7 +429,7 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     }
 
     attributes["offline"] = AccountAttribute.with {
-        $0.boolValue = false // allow downloading
+        $0.boolValue = true // allow downloading
     }
 
     attributes["on-demand"] = AccountAttribute.with {
