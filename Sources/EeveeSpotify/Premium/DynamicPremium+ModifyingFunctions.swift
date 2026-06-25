@@ -534,6 +534,10 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
         $0.stringValue = "99999999999999999"
     }
 
+    attributes["private-session-remaining"] = AccountAttribute.with {
+        $0.stringValue = "99999999999999999"
+    }
+
     attributes.removeValue(forKey: "payment-state")
     attributes.removeValue(forKey: "last-premium-activation-date")
     
