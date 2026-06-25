@@ -66,7 +66,7 @@ private func forcedPremiumString(forKey key: String) -> String? {
     case "payments-initial-campaign":              return "default"
     
     case "incognito_mode_timeout":                 return "9999999999"
-    case "private-session-remaining":              return "21599"
+   // case "private-session-remaining":              return "21599"
 
     // Server pushes these to trigger ForcedLogoutDaemon / AccessTokenRevokerDaemon.
     case "forced_logout":                          return ""
@@ -88,6 +88,7 @@ private let stripKeys: Set<String> = [
     "on-demand-trial",
     "on-demand-trial-in-progress",
     "smart-shuffle",
+    "private-session-remaining"
 ]
 
 private func rewritePremiumDict(_ dict: NSDictionary) -> NSDictionary {
