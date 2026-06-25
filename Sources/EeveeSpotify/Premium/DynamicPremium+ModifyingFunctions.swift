@@ -381,7 +381,7 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     }
     
     attributes["ab-ad-player-targeting"] = AccountAttribute.with {
-        $0.stringValue = false
+        $0.boolValue = false
     }
     
     attributes["allow-advertising-id-transmission"] = AccountAttribute.with {
@@ -397,11 +397,11 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     }
 
     attributes["enable-crossfade-product-state"] = AccountAttribute.with {
-        $0.stringValue = true
+        $0.boolValue = true
     }
 
     attributes["enable-gapless-product-state"] = AccountAttribute.with {
-        $0.stringValue = true
+        $0.boolValue = true
     }
 
     attributes["catalogue"] = AccountAttribute.with {
@@ -425,11 +425,11 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     }
 
     attributes["nft-disabled"] = AccountAttribute.with {
-        $0.stringValue = true
+        $0.boolValue = true
     }
 
     attributes["streaming-only-premium"] = AccountAttribute.with {
-        $0.stringValue = true
+        $0.boolValue = true
     }
 
     attributes["offline"] = AccountAttribute.with {
