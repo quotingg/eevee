@@ -20,6 +20,7 @@ private func forcedPremiumString(forKey key: String) -> String? {
     //spotify src | capabilites: {canDownload: dn("1" === e.offline, "1" === e["streaming-only-premium"])}
     //spotify lets you download stuff if you also have streaming-only-premium enabled
     case "streaming-only-premium":                 return "1"
+    case "has-audiobooks-subscription":            return "1"
 
     case "ads":                                    return "0"
     case "ad-session-persistence":                 return "0"
