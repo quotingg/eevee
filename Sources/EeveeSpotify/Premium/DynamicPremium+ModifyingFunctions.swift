@@ -539,10 +539,6 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
         $0.stringValue = "9999999998"
     }
 
-    attributes["is-pigeon"] = AccountAttribute.with {
-        $0.boolValue = true
-    }
-
     attributes.removeValue(forKey: "payment-state")
     attributes.removeValue(forKey: "last-premium-activation-date")
     
