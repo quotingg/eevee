@@ -65,8 +65,9 @@ private func forcedPremiumString(forKey key: String) -> String? {
     case "premium-promotion-eligible":             return "0"
     case "payments-initial-campaign":              return "default"
 
-    // private-session-remaining has to be 1 less than the default incognito_mode_timeout
-    // however this also enables automatic private session enabling doing this
+    // Keep incognito_mode_timeout the same but change private-session-remaing.
+    // Changing private-session-remaining will result in the private session lasting forever but disabling automatically on startup.
+    // Which is why the startup value is set to the default.
     case "incognito_mode_timeout":                 return "9999999999"
     case "private-session-remaining":              return "9999999998"
 
