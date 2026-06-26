@@ -533,13 +533,14 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     attributes["mobile"] = AccountAttribute.with {
         $0.boolValue = true
     }
-    
+
+    // Oddly enough, this allows editing to any value without restriction
     attributes["incognito_mode_timeout"] = AccountAttribute.with {
         $0.stringValue = "9999999999"
     }
 
-    // For some reason, this has to be 1 less than default incognito_mode_timeout (21600 so 21599)
-    // Have this value different so it can be switched to be permanent rather than that 21599 limit
+    // This has to be 1 less than default unmodified incognito_mode_timeout (21600)
+    // Also this is what actually enables private session on startup
     attributes["private-session-remaining"] = AccountAttribute.with {
         $0.stringValue = "21599"
     }
