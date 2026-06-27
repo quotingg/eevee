@@ -416,6 +416,10 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
         $0.boolValue = true
     }
 
+    attributes["employee-free-opt-in"] = AccountAttribute.with {
+        $0.boolValue = true
+    }
+
     attributes["name"] = AccountAttribute.with {
         $0.stringValue = "Spotify Premium"
     }
