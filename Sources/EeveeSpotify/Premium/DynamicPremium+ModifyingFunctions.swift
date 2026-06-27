@@ -570,7 +570,4 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
         attributes.removeValue(forKey: "is-premium-eligible-v\(i)")
     }
     attributes.removeValue(forKey: "is-premium-eligible")
-
-    attributes["private-session-remaining"] = AccountAttribute.with {
-        $0.stringValue = "9999999999"
-    }}
+}
