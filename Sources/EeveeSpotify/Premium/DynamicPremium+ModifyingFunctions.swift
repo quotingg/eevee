@@ -375,10 +375,6 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     attributes["ads"] = AccountAttribute.with {
         $0.boolValue = false
     }
-
-    attributes["ad-session-persistence"] = AccountAttribute.with {
-        $0.boolValue = false
-    }
     
     attributes["ab-ad-player-targeting"] = AccountAttribute.with {
         $0.boolValue = false
