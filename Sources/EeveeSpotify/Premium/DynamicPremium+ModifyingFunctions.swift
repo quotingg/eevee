@@ -2,6 +2,7 @@ import Foundation
 import UIKit
 
 func modifyRemoteConfiguration(_ configuration: inout UcsResponse) {
+    NSLog("[EeveeSpotify] Captured: %@", &configuration.attributes)
     modifyAttributes(&configuration.attributes.accountAttributes)
     
     // IMPORTANT:
