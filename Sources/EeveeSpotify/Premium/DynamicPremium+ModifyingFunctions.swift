@@ -412,10 +412,6 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
         $0.boolValue = true // or "1"
     }
 
-    attributes["key-caching-auto-offline"] = AccountAttribute.with {
-        $0.boolValue = true
-    }
-
     attributes["mixing-fx-looping-jogwheel"] = AccountAttribute.with {
         $0.boolValue = true
     }
@@ -432,12 +428,8 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
         $0.boolValue = true
     }
 
-    attributes["employee-free-opt-in"] = AccountAttribute.with {
-        $0.boolValue = true
-    }
-
     attributes["name"] = AccountAttribute.with {
-        $0.stringValue = "hla"//"Spotify Premium" hold on im testing this
+        $0.stringValue = "Spotify Premium" 
     }
 
     attributes["nft-disabled"] = AccountAttribute.with {
