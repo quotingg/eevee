@@ -376,6 +376,10 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
         $0.boolValue = false
     }
 
+    attributes["audiobook-onboarding-completed"] = AccountAttribute.with {
+        $0.boolValue = true
+    }
+
     attributes["aa-state"] = AccountAttribute.with {
         $0.stringValue = "COMPLETED"
     }
