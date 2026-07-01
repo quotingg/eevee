@@ -63,7 +63,11 @@ private func forcedPremiumString(forKey key: String) -> String? {
     case "current-period-end":                     return "9999999999"
     case "premium-promotion-eligible":             return "0"
     case "payments-initial-campaign":              return "default"
+
+        // test these
     case "key-caching-auto-offline":               return "1"
+    case "mixing-fx-looping-jogwheel":             return "1"
+    case "metadata-link-lookup-modes":             return "1"
 
     // Keep incognito_mode_timeout the same but change private-session-remaing.
     // Changing private-session-remaining will result in the private session lasting for that newly set time period but disabling automatically on startup.
