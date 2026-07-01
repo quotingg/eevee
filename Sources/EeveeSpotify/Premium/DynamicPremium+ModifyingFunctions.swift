@@ -416,6 +416,18 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
         $0.boolValue = true
     }
 
+    attributes["mixing-fx-looping-jogwheel"] = AccountAttribute.with {
+        $0.boolValue = true
+    }
+
+    attributes["metadata-link-lookup-modes"] = AccountAttribute.with {
+        $0.boolValue = true
+    }
+
+    attributes["market-portfolio-type"] = AccountAttribute.with {
+        $0.stringValue = "EXPANDED"
+    }
+    
     attributes["is-eligible-premium-unboxing"] = AccountAttribute.with {
         $0.boolValue = true
     }
