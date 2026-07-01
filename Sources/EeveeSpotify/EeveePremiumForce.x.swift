@@ -46,7 +46,7 @@ private func forcedPremiumString(forKey key: String) -> String? {
     case "previous-streaming-rules":               return ""
     case "high-bitrate":                           return "1"
     case "very-high-bitrate":                      return "1"
-    case "audio-quality":                          return "5"
+    case "audio-quality":                          return "6"
     case "shuffle":                                return "0"
     case "shuffle-mode":                           return "0"
     case "pick-and-shuffle":                       return "0"
