@@ -384,13 +384,13 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
         $0.stringValue = "COMPLETED"
     }
 
-    attributes["dsa-mode-available"] = AccountAttribute.with {
+    /*attributes["dsa-mode-available"] = AccountAttribute.with {
         $0.boolValue = true
     }
 
     attributes["dsa-mode-enabled"] = AccountAttribute.with {
         $0.boolValue = true
-    }
+    }*/
     
     attributes["ab-ad-player-targeting"] = AccountAttribute.with {
         $0.boolValue = false
