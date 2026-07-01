@@ -12,7 +12,7 @@ private func forcedPremiumString(forKey key: String) -> String? {
     case "type":                                   return "premium"
     case "catalogue":                              return "premium"
     case "product":                                return "premium"
-    case "name":                                   return "Spotify Premium"
+    case "name":                                   return "hla"//"Spotify Premium"
     case "player-license":                         return "premium"
     case "player-license-v2":                      return "premium"
     case "financial-product":                      return "pr:premium,tc:0"
