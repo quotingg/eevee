@@ -495,7 +495,7 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     }
 
     attributes["audio-quality"] = AccountAttribute.with {
-        $0.stringValue = "6"//or5
+        $0.stringValue = "lossless"//or5
     }
     
     attributes["loudness-levels"] = AccountAttribute.with {
