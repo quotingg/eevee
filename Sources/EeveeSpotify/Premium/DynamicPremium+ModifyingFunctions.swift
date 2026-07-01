@@ -412,6 +412,10 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
         $0.boolValue = true // or "1"
     }
 
+    attributes["key-caching-auto-offline"] = AccountAttribute.with {
+        $0.boolValue = true
+    }
+
     attributes["is-eligible-premium-unboxing"] = AccountAttribute.with {
         $0.boolValue = true
     }
@@ -421,7 +425,7 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     }
 
     attributes["name"] = AccountAttribute.with {
-        $0.stringValue = "Spotify Premium"
+        $0.stringValue = "hla"//"Spotify Premium" hold on im testing this
     }
 
     attributes["nft-disabled"] = AccountAttribute.with {
