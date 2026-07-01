@@ -384,6 +384,13 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
         $0.stringValue = "COMPLETED"
     }
 
+    attributes["dma-mode-available"] = AccountAttribute.with {
+        $0.boolValue = true
+    }
+
+    attributes["dma-mode-enabled"] = AccountAttribute.with {
+        $0.boolValue = true
+    }
     /*attributes["dsa-mode-available"] = AccountAttribute.with {
         $0.boolValue = true
     }
