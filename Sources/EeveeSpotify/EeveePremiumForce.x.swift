@@ -18,6 +18,8 @@ private func forcedPremiumString(forKey key: String) -> String? {
     case "financial-product":                      return "pr:premium,tc:0"
 
     case "aa-state"                                return "COMPLETED"
+    case "dsa-mode-available"                      return "1"
+    case "dsa-mode-enabled"                        return "1"
 
     //spotify src | capabilites: {canDownload: dn("1" === e.offline, "1" === e["streaming-only-premium"])}
     //spotify lets you download stuff if you also have streaming-only-premium enabled
