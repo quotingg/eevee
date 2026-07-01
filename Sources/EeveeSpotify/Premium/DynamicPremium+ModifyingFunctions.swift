@@ -375,6 +375,10 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     attributes["ads"] = AccountAttribute.with {
         $0.boolValue = false
     }
+
+    attributes["aa-state"] = AccountAttribute.with {
+        $0.stringValue = "COMPLETED"
+    }
     
     attributes["ab-ad-player-targeting"] = AccountAttribute.with {
         $0.boolValue = false
