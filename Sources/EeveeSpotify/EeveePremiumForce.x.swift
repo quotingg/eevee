@@ -12,7 +12,7 @@ private func forcedPremiumString(forKey key: String) -> String? {
     case "type":                                   return "premium"
     case "catalogue":                              return "premium"
     case "product":                                return "premium"
-    case "name":                                   return "hla"//"Spotify Premium"
+    case "name":                                   return "Spotify Premium"
     case "player-license":                         return "premium"
     case "player-license-v2":                      return "premium"
     case "financial-product":                      return "pr:premium,tc:0"
@@ -46,14 +46,14 @@ private func forcedPremiumString(forKey key: String) -> String? {
     case "previous-streaming-rules":               return ""
     case "high-bitrate":                           return "1"
     case "very-high-bitrate":                      return "1"
-    case "audio-quality":                          return "lossless"
+    case "audio-quality":                          return "0"
     case "shuffle":                                return "0"
     case "shuffle-mode":                           return "0"
     case "pick-and-shuffle":                       return "0"
 
     case "offline":                                return "1"
     case "can-use-offline":                        return "1"
-    case "has-offline-state":                      return "0"
+    case "has-offline-state":                      return "1"
     case "max-offline-downloads-per-device":       return "10000"
     case "max-offline-tracks":                     return "10000"
 
@@ -64,8 +64,7 @@ private func forcedPremiumString(forKey key: String) -> String? {
     case "premium-promotion-eligible":             return "0"
     case "payments-initial-campaign":              return "default"
 
-        // test these
-    case "key-caching-auto-offline":               return "1"
+
     case "mixing-fx-looping-jogwheel":             return "1"
     case "metadata-link-lookup-modes":             return "1"
 
@@ -74,7 +73,7 @@ private func forcedPremiumString(forKey key: String) -> String? {
     // Which is why the startup value is set to the default.
     // Theory for myself which i'll test but i think this disables literally inactivity as a result of calling this
     case "incognito_mode_timeout":                 return "9999999999"
-    case "private-session-remaining":              return "9999999998"
+    case "private-session-remaining":              return "21599"
 
     // Server pushes these to trigger ForcedLogoutDaemon / AccessTokenRevokerDaemon.
     case "forced_logout":                          return ""
