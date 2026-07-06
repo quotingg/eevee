@@ -24,6 +24,7 @@ private func forcedPremiumString(forKey key: String) -> String? {
     //case "audiobook-onboarding-completed":         return "1"
         
     // "streaming-only-premium" goes pair-to-pair with offline
+    case "playlist-annotations-markup":            return "1"
     case "streaming-only-premium":                 return "1"
     case "has-audiobooks-subscription":            return "1"
 
