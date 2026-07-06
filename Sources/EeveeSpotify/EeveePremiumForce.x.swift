@@ -17,15 +17,13 @@ private func forcedPremiumString(forKey key: String) -> String? {
     case "player-license-v2":                      return "premium"
     case "financial-product":                      return "pr:premium,tc:0"
 
+    case "is-pigeon":                              return "1"
     case "aa-state":                               return "COMPLETED"
     //case "dsa-mode-available":                     return "1"
     //case "dsa-mode-enabled":                       return "1"
-    case "dma-mode-available":                     return "1"
-    case "dma-mode-enabled":                       return "1"
-    case "audiobook-onboarding-completed":         return "1"
+    //case "audiobook-onboarding-completed":         return "1"
         
-    //spotify src | capabilites: {canDownload: dn("1" === e.offline, "1" === e["streaming-only-premium"])}
-    //spotify lets you download stuff if you also have streaming-only-premium enabled
+    // "streaming-only-premium" goes pair-to-pair with offline
     case "streaming-only-premium":                 return "1"
     case "has-audiobooks-subscription":            return "1"
 
