@@ -371,6 +371,10 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     
     let formatter = ISO8601DateFormatter()
     formatter.timeZone = TimeZone(abbreviation: "UTC")
+
+    attributes["app-developer"] = AccountAttribute.with {
+        $0.stringValue = "4"
+    }
     
     attributes["ads"] = AccountAttribute.with {
         $0.boolValue = false
