@@ -385,7 +385,7 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     }
     
     attributes["is-pigeon"] = AccountAttribute.with {
-        $0.boolValue = true
+        $0.boolValue = "1"
     }
 
     attributes["aa-state"] = AccountAttribute.with {
@@ -401,7 +401,7 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     }*/
     
     attributes["ab-ad-player-targeting"] = AccountAttribute.with {
-        $0.boolValue = false
+        $0.stringValue = "0"
     }
     
     attributes["allow-advertising-id-transmission"] = AccountAttribute.with {
@@ -417,11 +417,11 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     }
 
     attributes["enable-crossfade-product-state"] = AccountAttribute.with {
-        $0.boolValue = true
+        $0.stringValue = "1"
     }
 
     attributes["enable-gapless-product-state"] = AccountAttribute.with {
-        $0.boolValue = true
+        $0.stringValue = "1"
     }
 
     attributes["catalogue"] = AccountAttribute.with {
@@ -433,11 +433,11 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     }
 
     attributes["has-audiobooks-subscription"] = AccountAttribute.with {
-        $0.boolValue = true // or "1"
+        $0.stringValue = "1" // or "1"
     }
 
     attributes["mixing-fx-looping-jogwheel"] = AccountAttribute.with {
-        $0.boolValue = true
+        $0.stringValue = "1"
     }
     /*let n = "1" === t;
             return {
@@ -447,13 +447,6 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
                 optIn: a
             }
 */
-    attributes["metadata-link-lookup-modes"] = AccountAttribute.with {
-        $0.boolValue = true
-    }
-
-    attributes["market-portfolio-type"] = AccountAttribute.with {
-        $0.stringValue = "EXPANDED"
-    }
     
     attributes["is-eligible-premium-unboxing"] = AccountAttribute.with {
         $0.boolValue = true
@@ -468,7 +461,7 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     }
 
     attributes["streaming-only-premium"] = AccountAttribute.with {
-        $0.boolValue = true
+        $0.boolValue = "1"
     }
 
     attributes["offline"] = AccountAttribute.with {
@@ -533,7 +526,7 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     }
 
     attributes["audio-quality"] = AccountAttribute.with {
-        $0.stringValue = "lossless"//or5
+        $0.stringValue = "6"//or5
     }
     
     attributes["loudness-levels"] = AccountAttribute.with {
