@@ -376,7 +376,11 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
         $0.boolValue = false
     }
 
-    attributes["audiobook-onboarding-completed"] = AccountAttribute.with {
+    attributes["playlist-annotations-markup"] = AccountAttribute.with {
+        $0.boolValue = true
+    }
+    
+    attributes["is-pigeon"] = AccountAttribute.with {
         $0.boolValue = true
     }
 
@@ -384,13 +388,6 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
         $0.stringValue = "COMPLETED"
     }
 
-    attributes["dma-mode-available"] = AccountAttribute.with {
-        $0.boolValue = true
-    }
-
-    attributes["dma-mode-enabled"] = AccountAttribute.with {
-        $0.boolValue = true
-    }
     /*attributes["dsa-mode-available"] = AccountAttribute.with {
         $0.boolValue = true
     }
@@ -438,7 +435,14 @@ private func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     attributes["mixing-fx-looping-jogwheel"] = AccountAttribute.with {
         $0.boolValue = true
     }
-
+    /*let n = "1" === t;
+            return {
+                status: n ? "optedIn" : "optedOut",
+                canUseNewEffects: n,
+                shouldShowOptInPromo: !n,
+                optIn: a
+            }
+*/
     attributes["metadata-link-lookup-modes"] = AccountAttribute.with {
         $0.boolValue = true
     }
