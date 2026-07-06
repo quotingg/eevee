@@ -17,6 +17,7 @@ private func forcedPremiumString(forKey key: String) -> String? {
     case "player-license-v2":                      return "premium"
     case "financial-product":                      return "pr:premium,tc:0"
 
+    case "app-developer":                          return "4"
     case "is-pigeon":                              return "1"
     case "aa-state":                               return "COMPLETED"
     //case "dsa-mode-available":                     return "1"
